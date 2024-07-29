@@ -14,6 +14,10 @@ import NavBarI18n from './NavBarI18n.vue'
 import NavSearchBar from './NavSearchBar.vue'
 import NavBarNotifications from './NavBarNotifications.vue'
 import TheCustomizer from '@/plugins/vuetify/@core/components/TheCustomizer.vue'
+<<<<<<< HEAD
+=======
+import Breadcrumbs from './Breadcrumbs.vue'
+>>>>>>> origin/main
 
 const { appRouteTransition, isLessThanOverlayNavBreakpoint, isVerticalNavCollapsed } = useThemeConfig()
 const { width: windowWidth } = useWindowSize()
@@ -44,7 +48,7 @@ dashboard.initial()
         <UserProfile />
 
         <VSpacer />
-        <NavSearchBar />
+        <!-- <NavSearchBar />-->
         <NavBarNotifications />
         <NavBarI18n />
         <NavbarThemeSwitcher />

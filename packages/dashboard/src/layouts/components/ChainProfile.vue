@@ -32,14 +32,19 @@ const chainStore = useBlockchain()
         >
           <VList>
             <!-- 👉 Rest -->
+<<<<<<< HEAD
             <VListSubheader v-if="chainStore.current.apis?.rest" title="Rest Endpoint" />
             <VListItem v-for="i in chainStore.current.apis?.rest" link @click="chainStore.setRestEndpoint(i.address)">
+=======
+            <VListSubheader v-if="chainStore.current.endpoints?.rest" title="Rest Endpoint" />
+            <VListItem v-for="i in chainStore.current.endpoints?.rest" link @click="chainStore.setRestEndpoint(i.address)">
+>>>>>>> origin/main
               <VListItemTitle>{{ i.provider }} <VIcon v-if="chainStore.availableEndpoint && i.address === chainStore.availableEndpoint" icon="mdi-check" color="success" /></VListItemTitle>
               <VListItemSubtitle>{{ i.address }}</VListItemSubtitle>
             </VListItem>
 
-            <VListSubheader v-if="chainStore.current.apis?.grpc" title="gRPC Endpoint" />
-            <VListItem v-for="i in chainStore.current.apis?.grpc" link>
+            <VListSubheader v-if="chainStore.current.endpoints?.grpc" title="gRPC Endpoint" />
+            <VListItem v-for="i in chainStore.current.endpoints?.grpc" link>
               <VListItemTitle>{{ i.provider }}</VListItemTitle>
               <VListItemSubtitle>{{ i.address }}</VListItemSubtitle>
             </VListItem>
@@ -49,7 +54,7 @@ const chainStore = useBlockchain()
       </VAvatar>
     </VBadge>
   </template>
-  <VListItemTitle>{{ chainStore.current?.chain_id || '' }}</VListItemTitle>
+  <VListItemTitle>{{ chainStore.current?.chainId || '' }}</VListItemTitle>
   <VListItemSubtitle> {{ chainStore.availableEndpoint }}</VListItemSubtitle>
   </VListItem>
 </template>
